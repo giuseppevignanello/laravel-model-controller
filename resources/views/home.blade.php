@@ -1,17 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- @forelse ($movies as $movie)
-        <div class="card" style="width:18rem;">
-            <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                    content.</p>
-                b5
-            </div>
+    <div class="container">
+        <div class="row justify-content-center justify-content-md-between">
+            @forelse ($movies as $movie)
+                <div class="card  my-3" style="width:18rem;">
+                    <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $movie->title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted ">{{ $movie->original_title }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted ">Nationality: {{ $movie->nationality }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted ">Release Date: {{ $movie->date }}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted ">Average Vote: {{ $movie->vote }}</h6>
+                    </div>
+                </div>
+            @empty
+            @endforelse
         </div>
-    @empty
-    @endforelse --}}
+    </div>
 @endsection
