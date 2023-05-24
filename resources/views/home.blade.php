@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row justify-content-center justify-content-md-between">
             @forelse ($movies as $movie)
-                <div class="card  my-3" style="width:18rem;">
+                <div class="card  my-5 py-3" style="width:18rem;">
                     <img src="{{ $movie->image }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ $movie->title }}</h5>
