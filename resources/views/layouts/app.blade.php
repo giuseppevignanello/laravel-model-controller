@@ -19,7 +19,8 @@
 
     @include('partials.header')
 
-    <main class="bg-dark">
+    <main class="bg-dark d-flex">
+        @include('partials.sidebar')
         @yield('content')
     </main>
 

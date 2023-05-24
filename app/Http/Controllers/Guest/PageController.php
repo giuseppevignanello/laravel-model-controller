@@ -16,12 +16,13 @@ class PageController extends Controller
 
     public function about()
     {
-
-        return view('about');
+        $movies = Movie::orderBy('vote', 'desc')->get();
+        return view('about', compact('movies'));
     }
 
     public function contacts()
     {
-        return view('contacts');
+        $movies = Movie::orderBy('vote', 'desc')->get();
+        return view('contacts', compact('movies'));
     }
 }
